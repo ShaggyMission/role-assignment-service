@@ -1,14 +1,20 @@
 const express = require('express');
+const cors = require('cors');
 const sequelize = require('./config/database');
-const { assignRole } = require('./controllers/roleController');
 require('dotenv').config();
 
+const roleRoutes = require('./routes/roleRoutes');
+const swaggerRoutes = require('./routes/swaggerRoutes');
+
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 
-app.post('/assign-role', assignRole);
+app.use('/roles', roleRoutes);
+app.use('/roles', swaggerRoutes);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, async () => {
   try {
