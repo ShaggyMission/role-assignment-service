@@ -1,13 +1,12 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  'role_service_db',         
+  'admin',       
+  'PoolG10.11',         
   {
-    host: process.env.DB_HOST,
-    dialect: 'mariadb',
+    host: 'mariadb.cwizczqy6pft.us-east-1.rds.amazonaws.com', 
+    dialect: 'mariadb', 
     logging: false,
   }
 );
