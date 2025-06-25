@@ -1,18 +1,5 @@
-const express = require('express');
-const cors = require('cors');
+const app = require('./app');
 const sequelize = require('./config/database');
-require('dotenv').config();
-
-const roleRoutes = require('./routes/roleRoutes');
-const swaggerRoutes = require('./routes/swaggerRoutes');
-
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-app.use('/roles', roleRoutes);
-app.use('/roles', swaggerRoutes);
 
 const PORT = process.env.PORT || 3001;
 
