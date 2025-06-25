@@ -30,7 +30,7 @@ The **Role Assignment Service** is a crucial authorization microservice in the S
 ## 🛠️ Tech Stack
 
 - **Runtime**: Node.js with Express.js framework
-- **Database**: PostgreSQL with Sequelize ORM
+- **Database**: MariaDB with Sequelize ORM
 - **Architecture**: RESTful microservice design
 - **Documentation**: Swagger UI integration
 - **Data Modeling**: Relational database with foreign key relationships
